@@ -1,3 +1,97 @@
+$primary-color: #03a8f431;
+$secondary-color: #2196f3;
+$primary-font: 'Roboto Slab', serif;
+$secondary-font: 'Outfit', sans-serif;
+
+@mixin center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@mixin box-design {
+  border-radius: 20px;
+  background-color: $secondary-color;
+}
+@mixin title {
+  font-family: $primary-font;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+@mixin text {
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+}
+@mixin background-image($path) {
+  background-image: url($path);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  background-color: #30313f;
+  p {
+    display: none;
+    @include text();
+  }
+  img {
+    width: 120px;
+  }
+  .header__contact {
+    width: 105px;
+    height: 45px;
+    color: black;
+    @include text();
+    @include box-design();
+    @include center-all();
+  }
+}
+main {
+  @include center-all();
+  flex-direction: column;
+  .main__intro {
+    @include center-all();
+    @include background-image('../Images/intro.jpg');
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+    &--title {
+      @include title();
+      margin-top: 20px;
+      color: white
+    }
+    p {
+      @include text();
+      margin-top: 10px;
+      color: white;
+    }
+    &--contact {
+      @include box-design();
+      @include text();
+      @include center-all();
+      color: black;
+      width: 105px;
+      height: 45px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}
 
 
 /* FOOTER */
