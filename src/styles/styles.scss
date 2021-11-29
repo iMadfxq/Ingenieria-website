@@ -125,6 +125,57 @@ main {
       }
     }
   }
+  .main__speed {
+    @include section-size();
+    @include center-all();
+    @include background-image('../Images/speed.jpg');
+    flex-direction: column;
+    height: 500px;
+    &--text {
+      @include center-all();
+      flex-direction: column;
+      h2 {
+        @include title();
+        color: white;
+      }
+      p {
+        @include text();
+        color: white;
+        margin-top: 20px;
+      }  
+    }
+    &--boxes {
+      @include center-all();
+      flex-wrap: wrap;
+      margin-top: 20px;
+      .speed--box {
+        @include box-design();
+        @include center-all();
+        justify-content: flex-start;
+        width: 170px;
+        height: 65px;
+        padding: 10px;
+        margin: 8px;
+        span {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+        }
+        &--image1 {
+          @include background-image('../Images/transfer.svg');
+        }
+        &--image2 {
+          @include background-image('../Images/equal.svg');
+        }
+        &--image3 {
+          @include background-image('../Images/security.svg');
+        }
+        p {
+          @include text();
+        }
+      }
+    }
+  }
 }
 
 
