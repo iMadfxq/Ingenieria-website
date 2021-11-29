@@ -59,7 +59,7 @@ header {
   .header__contact {
     width: 105px;
     height: 40px;
-    color: black;
+    color: white;
     @include text();
     @include box-design();
     @include center-all();
@@ -90,7 +90,7 @@ main {
       @include box-design();
       @include text();
       @include center-all();
-      color: black;
+      color: white;
       width: 105px;
       height: 40px;
       margin-top: 20px;
@@ -172,6 +172,7 @@ main {
         }
         p {
           @include text();
+          color: white;
         }
       }
     }
