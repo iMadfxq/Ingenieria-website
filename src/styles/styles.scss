@@ -54,7 +54,7 @@ header {
   }
   .header__contact {
     width: 105px;
-    height: 45px;
+    height: 40px;
     color: black;
     @include text();
     @include box-design();
@@ -88,7 +88,7 @@ main {
       @include center-all();
       color: black;
       width: 105px;
-      height: 45px;
+      height: 40px;
       margin-top: 20px;
       margin-bottom: 20px;
     }
