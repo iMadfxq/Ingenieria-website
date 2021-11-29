@@ -11,6 +11,7 @@ $secondary-font: 'Outfit', sans-serif;
 @mixin box-design {
   border-radius: 20px;
   background-color: $primary-color;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 @mixin title {
   font-family: $primary-font;
@@ -27,6 +28,10 @@ $secondary-font: 'Outfit', sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
 }
+@mixin section-size {
+  width: 100%;
+  padding: 0 15px 0 15px;
+}
 
 * {
   box-sizing: border-box;
@@ -42,8 +47,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  width: 100%;
-  padding: 0 15px 0 15px;
+  @include section-size();
   background-color: black;
   p {
     display: none;
@@ -91,6 +95,34 @@ main {
       height: 40px;
       margin-top: 20px;
       margin-bottom: 20px;
+    }
+  }
+  .main__history {
+    @include center-all();
+    @include section-size();
+    flex-direction: column;
+    height: 600px;
+    @include background-image('../Images/history.jpg');
+    color: white;
+    h2 {
+      @include title();
+    }
+    p {
+      margin-top: 20px;
+      @include text();
+    }
+    &--boxes {
+      @include center-all();
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 20px;
+      p {
+      @include box-design();
+      @include center-all();
+      width: 110px;
+      height: 70px;
+      margin: 8px;
+      }
     }
   }
 }
