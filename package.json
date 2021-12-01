@@ -5,12 +5,14 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production --config webpack.config.js",
+    "dev": "webpack --watch --mode development --config webpack.config.dev.js"
   },
   "keywords": [],
   "author": "iMadfxq <imadfxq@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "dart-sass": "^1.25.0",
     "html-webpack-plugin": "^5.5.0",
@@ -19,6 +21,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "webpack": "^5.64.4",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
   }
 }

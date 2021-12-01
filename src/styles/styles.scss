@@ -38,6 +38,7 @@ $secondary-font: 'Outfit', sans-serif;
   padding: 0;
   margin: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 62.5%;
@@ -208,7 +209,7 @@ main {
         }
       }
       a:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
