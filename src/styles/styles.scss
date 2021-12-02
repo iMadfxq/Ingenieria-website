@@ -247,3 +247,40 @@ main {
   font-weight: bold;
   text-decoration: underline;
 }
+
+@media screen and (min-width: 992px) {
+  header p {
+    display: flex;
+    @include text();
+    color: white;
+    font-family: $primary-font;
+  }
+  .main {
+    @include center-all();
+    flex-direction: row;
+    .main__intro {
+      width: 35%;
+      order: 2;
+      height: 550px;
+      justify-content: flex-start;
+      padding-top: 50px;
+      h1 {
+        margin-top: 0;
+      }
+    }
+    .main__history {
+      width: 32.5%;
+      order: 1;
+      height: 550px;
+      justify-content: flex-start;
+      padding-top: 50px;
+    }
+    .main__speed {
+      width: 32.5%;
+      order: 3;
+      height: 550px;
+      justify-content: flex-start;
+      padding-top: 50px;
+    }
+  }
+}
